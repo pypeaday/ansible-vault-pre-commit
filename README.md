@@ -16,12 +16,8 @@ repos:
     rev: v1.0
     hooks:
       - id: encryption-check
-        name: Ansible Vault Encryption Check
-        description: Checks that task files are encrypted
-        entry: encryption-check.sh
         # override files to all files in ./tasks/ directory
         files: ((^|/)tasks)
-        language: script
 
 ```
 
