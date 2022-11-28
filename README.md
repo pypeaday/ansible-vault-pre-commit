@@ -10,14 +10,18 @@ Verifies that vault files are encrypted. Defaults to checking files starting
 with `vault`, ending with `.vault.yml` or ending in `.vault`
 
 ```yaml
-# example override 'file' key for looking at all files in the ./tasks directory
-hooks:
-  - id: encryption-check
-    name: Ansible Vault Encryption Check
-    description: Checks that task files are encrypted
-    entry: encryption-check.sh
-    files: ((^|/)tasks)
-    language: script
+# usage
+repos:
+  - repo: https://github.com/pypeaday/ansible-vault-pre-commit
+    rev: v1.0
+    hooks:
+      - id: encryption-check
+        name: Ansible Vault Encryption Check
+        description: Checks that task files are encrypted
+        entry: encryption-check.sh
+        # override files to all files in ./tasks/ directory
+        files: ((^|/)tasks)
+        language: script
 
 ```
 
