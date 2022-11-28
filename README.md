@@ -3,6 +3,10 @@
 A [pre-commit](http://pre-commit.com) hook that check for ansible-vault
 encryption
 
+## Example
+
+![pre-commit-hook](./pc.png)
+
 ## Hooks
 
 ### encryption-check
